@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>New AddressBook</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Create new AddressBook</h1>
+        <form action="#" th:action="@{/addressBook}" th:object="${addressBook}" method="post">
+            <p>Name: <input type="text" th:field="*{name}" /></p>
+            <p>OR select existing book:</p>
+            <div th:each="book : ${existingBooks}">
+                <div>
+                    <input type="radio" th:field="*{name}" th:value="${book.name}" />
+                    <label th:for="${book.name}" th:text="${book.name}" />
+                </div>
+            </div>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <a href="/getAddressBook">
+            <button>
+                GET AddressBook(s)
+            </button>
+        </a>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>AddressBook Info</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>AddressBook Info</h1>
+        <p th:text="'id: ' + ${addressBook.id}" />
+        <p th:text="'name: ' + ${addressBook.name}" />
+        <a href="/buddyInfo">
+            <button>
+                Add Buddy
+            </button>
+        </a>
+        <a href="/addressBook">
+            <button>
+                Add Another AddressBook
+            </button>
+        </a>
+    </body>
+</html>

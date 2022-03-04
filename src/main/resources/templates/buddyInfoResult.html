@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>AddressBook Info</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Created BuddyInfo</h1>
+        <p th:text="'First Name: ' + ${buddyInfo.firstName}" />
+        <p th:text="'Last Name: ' + ${buddyInfo.lastName}" />
+        <a href="/addressBook">
+            <button>
+                Return to AddressBook
+            </button>
+        </a>
+        <a href="/buddyInfo">
+            <button>
+                Add another BuddyInfo
+            </button>
+        </a>
+        <a href="/get">
+            <button>
+                Return to AddressBook
+            </button>
+        </a>
+    </body>
+</html>
